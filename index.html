@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>IceCream</title>
+</head>
+<body>
+    <div id="formContainer">
+        <form>
+            <div id="topContainer">
+                <div id="scoopsContainer">
+                    <label for="scoops">Number of scoops</label>
+                    <input type="number" id="scoops" name="scoops" min="1" step="1" pattern="\d+" required value="1">
+                </div>
+                <div id="radioContainer">
+                    <label for="cone">Cone</label>
+                    <input type="radio" id="cone" name="container" value="cone" required>
+                    <label for="cup">Cup</label>
+                    <input type="radio" id="cup" name="container" value="cup" required checked>
+                </div>
+            </div>
+            <div id="toppingsBigContainer">
+                <label for="toppings">Toppings</label>
+                <div id="toppingsContainer">
+                    <div class="checkboxContainer">
+                        <span>
+                            <input type="checkbox" id="sprinkles" name="toppings" value="sprinkles">
+                            <label for="sprinkles">Sprinkles ($0.50)</label>
+                        </span>
+                        <span>
+                            <input type="checkbox" id="whipped-cream" name="toppings" value="whipped-cream">
+                            <label for="whipped-cream">Whipped Cream ($0.25)</label>
+                        </span>
+                    </div>
+                    <div class="checkboxContainer">
+                        <span>
+                            <input type="checkbox" id="hot-fudge" name="toppings" value="hot-fudge">
+                            <label for="hot-fudge">Hot Fudge ($1.25)</label>
+                        </span>
+                        <span>
+                            <input type="checkbox" id="cherry" name="toppings" value="cherry">
+                            <label for="cherry">Cherry ($0.25)</label>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <button type="submit" value="Submit" id="submit">Submit Order</button>
+        <div id="priceContainer">
+            <p id="basePrice">Base Price: $0.00</p>
+            <p id="tax">Tax: $0.00</p>
+            <p id="total">Total Due: $0.00</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
